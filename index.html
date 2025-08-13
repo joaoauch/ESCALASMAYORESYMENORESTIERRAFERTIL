@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller Interactivo de Escalas Musicales</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* Proporción 16:9 */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .quiz-question {
+            padding: 1rem;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            transition: border-color 0.3s;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <div class="container mx-auto p-4 sm:p-6 lg:p-8 max-w-4xl">
+        <!-- Encabezado -->
+        <header class="text-center mb-8">
+            <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">🎸 Taller Interactivo: Escalas Mayores y Menores 🎹</h1>
+            <p class="text-lg text-gray-600">Aprende a construir, escuchar y entender las escalas musicales de una forma completamente nueva.</p>
+        </header>
+
+        <!-- Contenido Principal -->
+        <main class="space-y-12">
+
+            <!-- Paso 1: Video -->
+            <section id="step1" class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-2xl font-bold mb-4">Paso 1: ¡Abre tus oídos!</h2>
+                <p class="mb-4">Para comenzar, mira este video que explica de manera clara y visual los conceptos que necesitamos. No te preocupes si algo no queda claro a la primera, ¡para eso estamos aquí!</p>
+                <div class="video-container rounded-lg">
+                    <iframe src="https://www.youtube.com/embed/jxjx9jI5Ljs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </section>
+
+            <!-- Paso 2: Conceptos Clave -->
+            <section id="step2" class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-2xl font-bold mb-4">Paso 2: Conceptos Clave</h2>
+                 <div class="space-y-4">
+                    <details class="group">
+                        <summary class="flex items-center justify-between font-semibold p-3 bg-gray-50 rounded-lg cursor-pointer">
+                            <span>¿Qué es una Escala?</span>
+                            <svg class="w-5 h-5 transform group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <p class="p-3 text-gray-700">Una sucesión de notas ordenadas. Imagina que son los "peldaños" que usamos para movernos en la música.</p>
+                    </details>
+                    <details class="group">
+                        <summary class="flex items-center justify-between font-semibold p-3 bg-gray-50 rounded-lg cursor-pointer">
+                            <span>Tono y Semitono</span>
+                            <svg class="w-5 h-5 transform group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                         <div class="p-3 text-gray-700 space-y-2">
+                           <p><strong>Semitono:</strong> La distancia más corta entre dos notas (ej. de Mi a Fa).</p>
+                           <p><strong>Tono:</strong> Equivale a dos semitonos (ej. de Do a Re).</p>
+                        </div>
+                    </details>
+                     <details class="group">
+                        <summary class="flex items-center justify-between font-semibold p-3 bg-gray-50 rounded-lg cursor-pointer">
+                            <span>Fórmulas de Escalas</span>
+                            <svg class="w-5 h-5 transform group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                         <div class="p-3 text-gray-700 space-y-2">
+                           <p><strong>Fórmula Mayor:</strong> Tono - Tono - Semitono - Tono - Tono - Tono - Semitono.</p>
+                           <p><strong>Fórmula Menor Natural:</strong> Se crea a partir de una escala mayor, bajando un semitono a los grados 3º, 6º y 7º.</p>
+                           <p><strong>Fórmula Menor Armónica:</strong> Similar a la natural, pero la 7ª nota se mantiene como en la escala mayor (séptima mayor).</p>
+                        </div>
+                    </details>
+                </div>
+            </section>
+
+            <!-- Paso 3: Actividades Interactivas -->
+            <section id="step3" class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-2xl font-bold mb-4">Paso 3: ¡Manos a la Obra!</h2>
+
+                <!-- Quiz -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-4">Quiz Rápido: Mide tus conocimientos</h3>
+                    <form id="quizForm" class="space-y-4">
+                        <!-- Generado por JS -->
+                    </form>
+                    <button id="checkQuiz" class="mt-6 bg-blue-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-blue-700 transition-colors">Revisar Respuestas</button>
+                    <div id="quizResult" class="mt-4 font-semibold text-lg"></div>
+                </div>
+
+                <!-- Constructor de Escalas -->
+                <div class="mt-10">
+                    <h3 class="text-xl font-semibold mb-4">Actividad 2: Constructor de Escalas</h3>
+                    <p class="mb-4 text-gray-600">Elige una nota de inicio y el tipo de escala para ver las notas que la componen.</p>
+                    <div class="flex flex-col sm:flex-row items-center gap-4 p-4 bg-gray-50 rounded-lg">
+                        <select id="rootNote" class="p-2 border border-gray-300 rounded-md w-full sm:w-auto">
+                            <option value="C">Do (C)</option>
+                            <option value="C#">Do# / Reb (C#/Db)</option>
+                            <option value="D">Re (D)</option>
+                            <option value="D#">Re# / Mib (D#/Eb)</option>
+                            <option value="E">Mi (E)</option>
+                            <option value="F">Fa (F)</option>
+                            <option value="F#">Fa# / Solb (F#/Gb)</option>
+                            <option value="G">Sol (G)</option>
+                            <option value="G#">Sol# / Lab (G#/Ab)</option>
+                            <option value="A">La (A)</option>
+                            <option value="A#">La# / Sib (A#/Bb)</option>
+                            <option value="B">Si (B)</option>
+                        </select>
+                        <button id="buildMajor" class="bg-green-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-green-700 transition-colors w-full sm:w-auto">Crear Escala Mayor</button>
+                        <button id="buildMinor" class="bg-purple-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-purple-700 transition-colors w-full sm:w-auto">Crear Escala Menor Natural</button>
+                    </div>
+                    <div id="scaleResult" class="mt-4 p-4 bg-gray-100 rounded-lg min-h-[50px] text-lg font-mono text-center flex items-center justify-center">
+                        <!-- Las notas de la escala aparecerán aquí -->
+                    </div>
+                </div>
+
+                 <!-- Escucha y Siente -->
+                 <div class="mt-10">
+                    <h3 class="text-xl font-semibold mb-4">Actividad 3: Escucha y Siente</h3>
+                    <p class="mb-4 text-gray-600">Busca una canción que te guste mucho. Intenta adivinar si está en una tonalidad mayor (alegre, brillante) o menor (triste, oscura). Anota tus ideas aquí:</p>
+                    <textarea class="w-full p-2 border border-gray-300 rounded-md" rows="3" placeholder="Ej: 'Happy' de Pharrell Williams suena mayor por su energía..."></textarea>
+                </div>
+
+            </section>
+
+            <!-- Conclusión -->
+            <section id="conclusion" class="text-center bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-2xl font-bold mb-4">¡Felicidades y Actividad Final!</h2>
+                <h3 class="text-xl font-semibold mb-4">¡Demuestra tu talento!</h3>
+                <div class="text-left max-w-2xl mx-auto text-gray-700 space-y-3">
+                    <p>Envía un video tocando tu instrumento e interpretando las escalas mayores o menores de 4 canciones de alguna de las últimas asambleas en las que hayas participado. La canción debe escucharse de fondo mientras tu instrumento se destaca por encima.</p>
+                    <p>Trata de marcar cada acorde con tu instrumento, pero entre los cambios de acordes, ¡juega con las escalas!</p>
+                    <p class="font-semibold mt-4">Junto con tu video, debes enviar un pantallazo que demuestre un resultado perfecto en el quiz de este taller.</p>
+                    <p class="font-semibold mt-4">Finalmente, cuéntanos, ¿cómo te sentiste?, ¿qué descubriste?</p>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-12 py-4 border-t border-gray-300">
+            <p class="text-gray-500">Taller Interactivo creado con ❤️</p>
+        </footer>
+    </div>
+
+    <script>
+        // --- Lógica del Quiz Interactivo ---
+        const quizForm = document.getElementById('quizForm');
+        const checkQuizBtn = document.getElementById('checkQuiz');
+        const quizResultEl = document.getElementById('quizResult');
+
+        const questions = [
+            { q: "¿Qué distancia hay entre las notas Sol y La?", o: ["Un semitono", "Un tono", "Un tono y medio"], a: "Un tono" },
+            { q: "¿Qué distancia hay entre las notas Si y Do?", o: ["Un semitono", "Un tono", "Dos tonos"], a: "Un semitono" },
+            { q: "¿Cuántos semitonos necesitas para formar un tono completo?", o: ["Uno", "Dos", "Tres"], a: "Dos" },
+            { q: "La distancia más corta posible entre dos notas se llama:", o: ["Tono", "Intervalo", "Semitono"], a: "Semitono" },
+            { q: "¿Qué distancia hay entre Mi y Fa?", o: ["Un tono", "Un semitono", "Dos semitonos"], a: "Un semitono" },
+            { q: "La nota Do sostenido (C#) es la misma que:", o: ["Re bemol (Db)", "Si sostenido (B#)", "Re sostenido (D#)"], a: "Re bemol (Db)" },
+            { q: "¿Cuál es la fórmula de intervalos para una escala mayor?", o: ["T-S-T-T-S-T-T", "T-T-S-T-T-T-S", "T-T-T-S-T-T-S"], a: "T-T-S-T-T-T-S" },
+            { q: "En la escala de Do mayor, ¿qué intervalo hay entre el 3er grado (Mi) y el 4º grado (Fa)?", o: ["Tono", "Semitono", "Tercera"], a: "Semitono" },
+            { q: "En la escala de Do mayor, ¿qué intervalo hay entre el 7º grado (Si) y la octava (Do)?", o: ["Tono", "Semitono", "Séptima"], a: "Semitono" },
+            { q: "Para formar una escala menor natural a partir de una mayor, ¿qué grados se alteran?", o: ["3º, 5º y 7º", "2º, 4º y 6º", "3º, 6º y 7º"], a: "3º, 6º y 7º" },
+            { q: "¿Cuál es la tercera nota de la escala de Sol Mayor?", o: ["La", "Si", "Do"], a: "Si" },
+            { q: "¿Cuál es la quinta nota de la escala de Fa Mayor?", o: ["Sol", "La", "Do"], a: "Do" },
+            { q: "Si convertimos Do Mayor a Do menor natural, la nota Mi se convierte en:", o: ["Mi bemol (Eb)", "Mi sostenido (E#)", "Se mantiene igual"], a: "Mi bemol (Eb)" },
+            { q: "Si convertimos Do Mayor a Do menor natural, la nota La se convierte en:", o: ["La bemol (Ab)", "La sostenido (A#)", "Se mantiene igual"], a: "La bemol (Ab)" },
+            { q: "¿Qué diferencia a la escala menor armónica de la menor natural?", o: ["El 3er grado es mayor", "El 7º grado es más alto (séptima mayor)", "El 6º grado es más bajo"], a: "El 7º grado es más alto (séptima mayor)" },
+            { q: "El primer grado de una escala se llama:", o: ["Dominante", "Tónica", "Sensible"], a: "Tónica" },
+            { q: "¿Cuántas notas tiene una escala diatónica (mayor o menor)?", o: ["5", "7", "12"], a: "7" },
+            { q: "La nota Sol bemol (Gb) es la misma que:", o: ["Fa sostenido (F#)", "Sol sostenido (G#)", "Fa bemol (Fb)"], a: "Fa sostenido (F#)" },
+            { q: "En la escala de Re Mayor (D-E-F#-G-A-B-C#), ¿cuál es el 7º grado?", o: ["Do (C)", "Do sostenido (C#)", "Si (B)"], a: "Do sostenido (C#)" },
+            { q: "¿Qué sensación suele asociarse a las escalas mayores?", o: ["Tristeza, oscuridad", "Tensión, misterio", "Alegría, brillantez"], a: "Alegría, brillantez" }
+        ];
+
+        function renderQuiz() {
+            let html = '';
+            questions.forEach((item, index) => {
+                const optionsHtml = item.o.map(option => `
+                    <label class="flex items-center p-2 rounded-md hover:bg-gray-100 cursor-pointer">
+                        <input type="radio" name="q${index}" value="${option}" class="mr-3"> ${option}
+                    </label>
+                `).join('');
+                html += `
+                    <div id="q${index}" class="quiz-question">
+                        <p class="font-medium mb-2">${index + 1}. ${item.q}</p>
+                        <div class="space-y-1">${optionsHtml}</div>
+                    </div>
+                `;
+            });
+            quizForm.innerHTML = html;
+        }
+
+        checkQuizBtn.addEventListener('click', () => {
+            const formData = new FormData(quizForm);
+            let score = 0;
+            let answeredQuestions = 0;
+
+            questions.forEach((question, index) => {
+                const questionEl = document.getElementById(`q${index}`);
+                questionEl.style.borderColor = '#e5e7eb'; // Reset border
+                questionEl.style.borderWidth = '1px';
+
+                const userAnswer = formData.get(`q${index}`);
+                if (userAnswer) {
+                    answeredQuestions++;
+                    if (userAnswer === question.a) {
+                        score++;
+                        questionEl.style.borderColor = '#4ade80'; // Green
+                        questionEl.style.borderWidth = '2px';
+                    } else {
+                        questionEl.style.borderColor = '#f87171'; // Red
+                        questionEl.style.borderWidth = '2px';
+                    }
+                }
+            });
+
+            if (answeredQuestions < questions.length) {
+                 quizResultEl.textContent = 'Por favor, responde todas las preguntas.';
+                 quizResultEl.className = 'mt-4 font-semibold text-lg text-yellow-600';
+                 return;
+            }
+
+            quizResultEl.textContent = `Tu puntuación: ${score} de ${questions.length}.`;
+            if(score === questions.length) {
+                quizResultEl.className = 'mt-4 font-semibold text-lg text-green-600';
+                quizResultEl.textContent += ' ¡Perfecto! Ya puedes tomar el pantallazo.';
+            } else {
+                quizResultEl.className = 'mt-4 font-semibold text-lg text-red-600';
+                quizResultEl.textContent += ' ¡Sigue intentándolo!';
+            }
+        });
+
+        // --- Lógica del Constructor de Escalas ---
+        const notes = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
+        const majorPattern = [2, 2, 1, 2, 2, 2, 1]; // T-T-S-T-T-T-S
+        const minorNaturalPattern = [2, 1, 2, 2, 1, 2, 2]; // T-S-T-T-S-T-T
+
+        const buildMajorBtn = document.getElementById('buildMajor');
+        const buildMinorBtn = document.getElementById('buildMinor');
+        const scaleResultEl = document.getElementById('scaleResult');
+
+        function buildScale(rootNote, pattern) {
+            const scale = [rootNote];
+            let currentIndex = notes.indexOf(rootNote);
+
+            for (const interval of pattern.slice(0, -1)) {
+                currentIndex = (currentIndex + interval) % 12;
+                scale.push(notes[currentIndex]);
+            }
+            
+            return scale.join(' &nbsp;&nbsp; - &nbsp;&nbsp; ');
+        }
+        
+        buildMajorBtn.addEventListener('click', () => {
+            const rootNote = document.getElementById('rootNote').value;
+            scaleResultEl.innerHTML = buildScale(rootNote, majorPattern);
+        });
+
+        buildMinorBtn.addEventListener('click', () => {
+            const rootNote = document.getElementById('rootNote').value;
+            scaleResultEl.innerHTML = buildScale(rootNote, minorNaturalPattern);
+        });
+        
+        // Renderizar el quiz al cargar la página
+        renderQuiz();
+
+    </script>
+</body>
+</html>
